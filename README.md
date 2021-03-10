@@ -16,6 +16,8 @@ google sheet　に　10コーナーで、目視で担当者に1Hごとに
 
 （上記　要検討）
 入力
+https://docs.google.com/spreadsheets/d/1IEQxziDvTTgcZeEo5_NRwGa1IBhDpI5HUXTbSXd_UAw/edit?usp=sharing
+
 
  そのデータをもとに
  密状況を
