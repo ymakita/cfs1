@@ -32,7 +32,7 @@
         }).addTo(map);
         
         var popup = L.popup();
-        L.marker([35.950622, 136.181958]).addTo(map);//0
+        L.marker([35.950622, 136.181958],{icon: L.spriteIcon(p0)}).addTo(map);//0
         L.marker([35.950501, 136.1825],{icon: L.spriteIcon(p1)}).addTo(map);//1
         L.marker([35.949945, 136.182173],{icon: L.spriteIcon(p2)}).addTo(map);//2
         L.marker([35.949913, 136.182463],{icon: L.spriteIcon(p3)}).addTo(map);//3
@@ -45,7 +45,7 @@
  //       L.marker([35.950969, 136.184603],{icon: L.spriteIcon('blue')}).addTo(map);
 
         circle = L.circle([35.950622, 136.181958], {color: p0,radius: 20 }).addTo(map);
-        circle = L.circle([35.950501, 136.1825], {color: p1,fillColor: p1,fillOpacity: 0.2,radius: 30 }).addTo(map);
+        circle = L.circle([35.950501, 136.1825], {color: p1,fillColor: p1,fillOpacity: 0.2,radius: 20 }).addTo(map);
         circle = L.circle([35.949945, 136.182173], {color: p2,fillColor: p2,fillOpacity: 0.5,radius: 20 }).addTo(map);
         circle = L.circle([35.949913, 136.182463], {color: p3,fillColor: p3,fillOpacity: 0.5,radius: 20 }).addTo(map);
         circle = L.circle([35.949474, 136.181717], {color: p4,fillColor: p4,fillOpacity: 0.5,radius: 20 }).addTo(map);
