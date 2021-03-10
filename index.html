@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenStreetMapとLeafletで地図にマーカーを複数表示する</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="leaflet.sprite.js"></script>
+  </head>
+  <body>
+    <h2>西山公園　密状況</h2>
+    <div id="view_map" style="height: 500px;"></div>
+    
+    <script type="text/javascript">
+        var p0="red";//"0 芝生広場西  35.950622, 136.181958" 
+        var p1="yellow";//"1 芝生広場東 35.950501, 136.1825"
+        var p2="blue";//"2 噴水前 35.949945, 136.182173"
+        var p3="red";//"3 エントランス 35.949913, 136.182463"
+        var p4="red";//"4 中央広場北 35.949474, 136.181717"
+        var p5="red";//"5 中央広場南 35.949748, 136.181883"
+        var p6="red";//"6 西山動物園南 35.950289, 136.18103"
+        var p7="red";//"7 西山動物園北 35.951152, 136.180837"
+        var p8="red";//"8 東山　中段の庭 35.950735, 136.184056"
+      　var p9="red";//"9 東山　上段の庭 35.950969, 136.184603"
+       
+        //緯度,経度,ズーム
+        var map = L.map('view_map').setView([35.950592, 136.183063], 18);
+        // OpenStreetMap から地図画像を読み込む
+        L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
+        }).addTo(map);
+        
+        var popup = L.popup();
+        L.marker([35.950622, 136.181958],{icon: L.spriteIcon(p0)}).addTo(map);//0
+        L.marker([35.950501, 136.1825],{icon: L.spriteIcon(p1)}).addTo(map);//1
+        L.marker([35.949945, 136.182173],{icon: L.spriteIcon(p2)}).addTo(map);//2
+        L.marker([35.949913, 136.182463],{icon: L.spriteIcon(p3)}).addTo(map);//3
+        L.marker([35.949474, 136.181717],{icon: L.spriteIcon(p4)}).addTo(map);//4
+        L.marker([35.949748, 136.181883],{icon: L.spriteIcon(p5)}).addTo(map);//5
+        L.marker([35.950289, 136.18103],{icon: L.spriteIcon(p6)}).addTo(map);//6
+        L.marker([35.951152, 136.180837],{icon: L.spriteIcon(p7)}).addTo(map);//7
+        L.marker([35.950735, 136.184056],{icon: L.spriteIcon(p8)}).addTo(map);//8
+        L.marker([35.950969, 136.184603],{icon: L.spriteIcon(p9)}).addTo(map);//9
+ //       L.marker([35.950969, 136.184603],{icon: L.spriteIcon('blue')}).addTo(map);
+
+        circle = L.circle([35.950622, 136.181958], {color: p0,radius: 20 }).addTo(map);
+        circle = L.circle([35.950501, 136.1825], {color: p1,fillColor: p1,fillOpacity: 0.2,radius: 30 }).addTo(map);
+        circle = L.circle([35.949945, 136.182173], {color: p2,fillColor: p2,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.949913, 136.182463], {color: p3,fillColor: p3,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.949474, 136.181717], {color: p4,fillColor: p4,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.949748, 136.181883], {color: p5,fillColor: p5,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.950289, 136.18103], {color: p6,fillColor: p6,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.951152, 136.180837], {color: p7,fillColor: p7,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.950735, 136.184056], {color: p8,fillColor: p8,fillOpacity: 0.5,radius: 20 }).addTo(map);
+        circle = L.circle([35.950969, 136.184603], {color: p9,fillColor: p9,fillOpacity: 0.5,radius: 20 }).addTo(map);
+    
+        
+
+    </script>
+  </body>
+</html>
